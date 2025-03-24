@@ -39,4 +39,8 @@ public class Equipo {
         }
         return productividades;
     }
+
+    public List<Personal> getMiembros() {
+        return miembros;
+    }
 }
