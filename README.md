@@ -8,8 +8,8 @@ git remote -v
 Esto debería mostrar algo como:
 
 ```perl
-origin  https://github.com/tu_usuario/plantilla_endes.git (fetch)
-origin  https://github.com/tu_usuario/plantilla_endes.git (push)
+origin  https://github.com/tu_usuario/equipo_endes.git (fetch)
+origin  https://github.com/tu_usuario/equipo_endes.git (push)
 ```
 
 Si no ves un remoto llamado `upstream`, es porque aún no lo has configurado.
@@ -21,7 +21,7 @@ Si no ves un remoto llamado `upstream`, es porque aún no lo has configurado.
 Ahora, debes agregar el repositorio original (el del fork) como un remoto llamado `upstream`:
 
 ```bash
-git remote add upstream https://github.com/profeInformatica101/plantilla_endes.git
+git remote add upstream https://github.com/profeInformatica101/equipo_endes.git
 ```
 
 Asegúrate de que la URL sea correcta, dependiendo de la ubicación del repositorio original.
