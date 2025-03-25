@@ -58,13 +58,14 @@ class EquipoTest {
      * - Comprueba que el tamaño de la lista es 1.
      * - Verifica que el miembro añadido es el esperado.
      */
-    /*
+    
     @Test
     @DisplayName("Añadir un miembro válido al equipo")
     void testAñadirMiembroValido() {
-        // Tu código aquí
+    	Personal dev1 = new Desarrollador("123A", "Ana", 1000.0, "Java");
+    	equipo.añadirMiembro(dev1);
     }
-    */
+    
 
     /**
      * Debes implementar esta prueba para verificar que el método
@@ -76,13 +77,18 @@ class EquipoTest {
      * - Comprueba que la lista tiene el tamaño correcto.
      * - Verifica que los valores de productividad son los esperados.
      */
-    /*
+    
     @Test
     @DisplayName("Listar las productividades del equipo")
     void testListarProductividades() {
-        // Tu código aquí
+    	Personal dev1 = new Desarrollador("123A", "Ana", 1000.0, "Java");
+        Personal devDuplicado = new Desarrollador("123A", "OtroNombre", 1100.0, "Python");
+        equipo.añadirMiembro(dev1);
+        equipo.añadirMiembro(devDuplicado);
+        //double[] valorEsperado = 1100.00, 1210.00;
+        //assertEquals(valorEsperado, equipo.listarProductividades());
     }
-    */
+    
     /**
      * Verifica que un equipo nuevo se inicializa con la lista de miembros vacía.
      */
