@@ -24,9 +24,14 @@ public class Equipo {
         if (p == null) {
             throw new IllegalArgumentException("El miembro no puede ser nulo.");
         }
+        for(int i = 0; i < miembros.size(); i++) {
+        	if(miembros.get(i).getDni() == p.getDni()) {
+        		throw new IllegalArgumentException("El empleado con DNI " + p.getDni() + " ya está contratado");
+        	}
+        }
         miembros.add(p);
     }
-
+    
     /**
      * Devuelve la lista de productividades de todos los miembros del equipo.
      *

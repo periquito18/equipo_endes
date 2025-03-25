@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,7 @@ class EquipoTest {
         equipo = new Equipo();
     }
 
-    @Disabled
+    
     @Test
     @DisplayName("Añadir un miembro con DNI único no lanza excepción; el duplicado sí")
     void testAñadirMiembroDuplicado() {
@@ -36,7 +35,16 @@ class EquipoTest {
             () -> equipo.añadirMiembro(devDuplicado),
             "Se esperaba una excepción por DNI duplicado"
         );
-
+        String mensajeEsperado = "El empleado con DNI " + devDuplicado.getDni() + " ya está contratado";
+        assertEquals(mensajeEsperado, exception.getMessage());
+    }
+    
+    @Test
+    @DisplayName("Añadir un personal nulo")
+    void testMiembroNulo() {
+    	Exception exception = assertThrows(IllegalArgumentException.class, ()-> equipo.añadirMiembro(null));
+		String mensajeEsperado = "El miembro no puede ser nulo.";
+		assertEquals(mensajeEsperado, exception.getMessage());
     }
     
     
